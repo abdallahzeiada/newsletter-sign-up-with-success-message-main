@@ -14,7 +14,6 @@ function formVal() {
   let email = emailInput.value;
   let isValid = validateEmail(email);
   if (!isValid) {
-    emailInput.value = "";
     emailInput.classList.add("error-email");
     errorLabel.style.display = "block";
   } else {
@@ -30,3 +29,6 @@ dismiss.addEventListener("click", () => {
   container.style.display = "flex";
   successState.style.display = "none";
 });
+emailInput.addEventListener("input",() => {
+  emailInput.classList.remove("error-email");
+})
