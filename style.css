@@ -15,10 +15,10 @@ body {
   position: relative;
 }
 body .container {
-  width: 760px;
-  height: 525px;
+  width: 930px;
+  height: 640px;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 30px;
+  border-radius: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,21 +26,22 @@ body .container {
 }
 body .container .left {
   width: 55%;
-  padding-left: 50px;
+  padding-left: 65px;
 }
 body .container .left h1 {
-  font-size: 46px;
+  font-size: 56px;
   text-transform: normal;
   font-weight: 700;
   color: hsl(234, 29%, 20%);
-  transform: translateY(-20px);
+  transform: translateY(-55px);
 }
 body .container .left h4 {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: normal;
-  font-weight: 500;
+  font-weight: 700;
   color: hsl(234, 29%, 20%);
-  transform: translateY(-3px);
+  transform: translateY(-35px);
+  line-height: 1.5;
 }
 body .container .left ul {
   margin-top: 20px;
@@ -48,26 +49,26 @@ body .container .left ul {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
   flex-direction: column;
+  transform: translateY(-30px);
 }
 body .container .left ul li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 12px;
+  gap: 17px;
 }
 body .container .left ul li p {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: normal;
   font-weight: 500;
   color: hsl(234, 29%, 20%);
 }
 body .container .left ul li img {
-  width: 18px;
+  width: 20px;
 }
 body .container .left .form {
-  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -78,32 +79,32 @@ body .container .left .form {
   width: fit-content;
 }
 body .container .left .form label {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: normal;
-  font-weight: 700;
+  font-weight: 500;
   color: hsl(234, 29%, 20%);
 }
 body .container .left .form #email {
-  width: 310px;
-  height: 45px;
+  width: 375px;
+  height: 55px;
   border-radius: 5px;
   outline: none;
   border: none;
   box-shadow: 0 0 3px hsl(231, 7%, 60%);
-  padding: 0 15px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding: 0 25px;
   font-weight: 700;
+  transform: translateY(10px);
+  font-size: 16px;
 }
 body .container .left .form #email::-moz-placeholder {
   color: hsl(231, 7%, 60%);
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 16px;
 }
 body .container .left .form #email::placeholder {
   color: hsl(231, 7%, 60%);
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 16px;
 }
 body .container .left .form #email:focus {
   border: 2px solid hsl(234, 29%, 20%);
@@ -122,14 +123,15 @@ body .container .left .form .error-label {
   display: none;
 }
 body .container .left .form #submit {
-  width: 310px;
-  height: 45px;
+  width: 375px;
+  height: 57px;
   border: none;
-  font-size: 12px;
+  font-size: 14px;
   background-color: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 8px;
+  transform: translateY(32px);
 }
 body .container .left .form #submit:hover {
   background: linear-gradient(120deg, crimson, hsl(4, 100%, 60%), hsl(4, 100%, 67%));
@@ -138,53 +140,54 @@ body .container .left .form #submit:hover {
 }
 body .container .right {
   width: 52%;
-  height: 92%;
+  height: 93%;
   border-radius: 10px;
   background: url("./assets/images/illustration-sign-up-desktop.svg") center/contain no-repeat;
 }
 body .success-state {
-  width: 410px;
-  height: 425px;
+  width: 505px;
+  height: 520px;
   background-color: hsl(0, 0%, 100%);
-  padding: 40px 50px;
-  border-radius: 35px;
+  padding: 45px 65px;
+  border-radius: 40px;
   display: none;
 }
 body .success-state img {
-  width: 50px;
+  width: 65px;
 }
 body .success-state h1 {
   color: hsl(234, 29%, 20%);
-  font-size: 45px;
-  margin-top: 25px;
-  line-height: 1.1;
+  font-size: 55px;
+  line-height: 1.06;
+  transform: translateY(35px);
   letter-spacing: 0.5px;
 }
 body .success-state p {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   color: hsl(234, 29%, 20%);
-  line-height: 1.3;
-  margin-bottom: 50px;
-  transform: translateY(20px);
+  line-height: 1.4;
+  transform: translateY(60px);
 }
 body .success-state p input {
   background-color: transparent;
   border: none;
   width: 50%;
+  font-size: 16px;
   color: hsl(234, 29%, 20%);
   font-weight: 700;
 }
 body .success-state button {
   width: 100%;
-  height: 45px;
+  height: 55px;
   margin-top: 5px;
   background-color: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
+  transform: translateY(99px);
 }
 body .success-state button:hover {
   background: linear-gradient(120deg, crimson, hsl(4, 100%, 60%), hsl(4, 100%, 67%));
