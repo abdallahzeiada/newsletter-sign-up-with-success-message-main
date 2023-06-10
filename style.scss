@@ -1,0 +1,179 @@
+$Tomato: hsl(4, 100%, 67%);
+$Tomato1: hsl(4, 100%, 60%);
+$DarkSlateGrey: hsl(234, 29%, 20%);
+$CharcoalGrey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+@mixin flex($just, $align, $gap) {
+  display: flex;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin text($size, $weight, $color, $trans) {
+  font-size: $size;
+  text-transform: $trans;
+  font-weight: $weight;
+  color: $color;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $CharcoalGrey;
+  @include flex(center, center, 0);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  .container {
+    width: 760px;
+    height: 525px;
+    background-color: $White;
+    border-radius: 30px;
+    @include flex(space-between, center, 0);
+    .left {
+      width: 55%;
+      padding-left: 50px;
+      h1 {
+        @include text(46px, 700, $DarkSlateGrey, normal);
+        transform: translateY(-20px);
+      }
+      h4 {
+        @include text(14px, 500, $DarkSlateGrey, normal);
+        transform: translateY(-3px);
+      }
+      ul {
+        margin-top: 20px;
+        list-style: none;
+        @include flex(flex-start, flex-start, 10px);
+        flex-direction: column;
+        li {
+          @include flex(flex-start, center, 12px);
+          p {
+            @include text(14px, 500, $DarkSlateGrey, normal);
+          }
+          img {
+            width: 18px;
+          }
+        }
+      }
+      .form {
+        margin-top: 20px;
+        @include flex(flex-start, flex-start, 0);
+        transform: translateY(15px);
+        flex-direction: column;
+        width: fit-content;
+        label {
+          @include text(10px, 700, $DarkSlateGrey, normal);
+        }
+        #email {
+          width: 310px;
+          height: 45px;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          box-shadow: 0 0 3px $Grey;
+          padding: 0 15px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-weight: 700;
+          &::placeholder {
+            color: $Grey;
+            font-weight: 700;
+            font-size: 12px;
+          }
+          &:focus {
+            border: 2px solid $DarkSlateGrey;
+            cursor: pointer;
+          }
+        }
+        .error-email {
+          background-color: rgba($color: $Tomato1, $alpha: 0.2);
+          color: $Tomato1 !important;
+          border: 1px solid $Tomato !important;
+          box-shadow: 0 0 5px $Tomato !important;
+        }
+        .error-label {
+          position: absolute;
+          right: 0;
+          color: $Tomato1;
+          display: none;
+        }
+        #submit {
+          width: 310px;
+          height: 45px;
+          border: none;
+          font-size: 12px;
+          background-color: $DarkSlateGrey;
+          color: $White;
+          font-weight: 700;
+          border-radius: 5px;
+          &:hover {
+            background: linear-gradient(120deg, crimson, $Tomato1, $Tomato);
+            cursor: pointer;
+            box-shadow: 0 0 20px $Tomato;
+          }
+        }
+      }
+    }
+    .right {
+      width: 52%;
+      height: 92%;
+      border-radius: 10px;
+      background: url("./assets/images/illustration-sign-up-desktop.svg")
+        center/contain no-repeat;
+    }
+  }
+  .success-state {
+    width: 410px;
+    height: 425px;
+    background-color: $White;
+    padding: 40px 50px;
+    border-radius: 35px;
+    display: none;
+    img {
+      width: 50px;
+    }
+    h1 {
+      color: $DarkSlateGrey;
+      font-size: 45px;
+      margin-top: 25px;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-size: 13px;
+      font-weight: 700;
+      color: $DarkSlateGrey;
+      line-height: 1.3;
+      margin-bottom: 50px;
+      transform: translateY(20px);
+      input {
+        background-color: transparent;
+        border: none;
+        width: 50%;
+        color: $DarkSlateGrey;
+        font-weight: 700;
+      }
+    }
+    button {
+      width: 100%;
+      height: 45px;
+      margin-top: 5px;
+      background-color: $DarkSlateGrey;
+      color: $White;
+      border-radius: 5px;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      &:hover {
+        background: linear-gradient(120deg, crimson, $Tomato1, $Tomato);
+        cursor: pointer;
+        box-shadow: 0 0 20px $Tomato;
+      }
+    }
+  }
+}
+@import "mediaQuery";

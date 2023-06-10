@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h1>Stay updated!</h1>
+      <h4> Join 60,000+ product managers receiving monthly updates on:
+      </h4>
+      <ul>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="alt">
+          <p>Product discovery and building what matters</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="alt">
+          <p>Measuring to ensure updates are a success</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="alt">
+          <p>And much more!</p>
+        </li>
+      </ul>
+      <div class="form">
+        <label>Email address</label>
+        <label class="error-label">Valid email required</label>
+        <input type="text" placeholder="email@company.com" id="email">
+        <input onclick="formVal()" type="button" value="Subscribe to monthly newsletter" id="submit">
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+  <div class="success-state">
+    <img src="assets/images/icon-list.svg" alt="alt">
+    <h1>Thanks for subscribing!</h1>
+    <p> A confirmation email has been sent to <input disabled type="text" value="ash@loremcompany.com" id="suc-em-val">
+      .
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button id="dismiss">Dismiss message</button>
+  </div>
+</body>
+
+</html>
